@@ -1,0 +1,17 @@
+.form-control {
+    /* Your styles for form controls */
+    margin-bottom: 10px;
+    background-color: purple;
+}
+
+/* Specific styling for form submit button */
+.submit-button {
+    /* Your styles for submit button */
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+

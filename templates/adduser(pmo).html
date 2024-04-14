@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PMO/Admin Registration</title>
+    <link rel="stylesheet" type="text/css" href="adduser(pmo).css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="fform">
+                <form id="form" class="main" onsubmit="return validateForm()">
+                    <div class="user-icon">
+                        <img src="user.png" alt="User Icon">
+                    </div>
+                    <h2>Add User</h2>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="firstName">First Name</label>
+                            <input type="text" name="firstName" id="firstName">
+                            <p id="fError"></p>
+                        </div>
+                        <div class="input-field">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName">
+                            <p id="lError"></p>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                            <p id="emailError"></p>
+                        </div>
+                        <div class="input-field">
+                            <label for="qualification">Qualification</label>
+                            <input type="text" name="qualification" id="qualification">
+                            <p id="qError"></p>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                            <p id="passError"></p>
+                        </div>
+                        <div class="input-field">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" name="confirmPassword" id="confirmPassword">
+                            <p id="cpassError"></p>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="radio-group">
+                            <label class="gender-label">Gender</label>
+                            <div class="radio-field">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-field">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-field">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                            <p id="radioError"></p>
+                        </div>
+                    </div>
+                    <button type="submit">ADD</button>
+                    <div class="image">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="adduser(pmo).js"></script>
+</html>

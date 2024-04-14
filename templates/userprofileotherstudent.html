@@ -1,0 +1,114 @@
+
+{% extends "baseunregistered.html" %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block projectactive %}active{% endblock projectactive %}
+{% block cssfile%}  <link rel="stylesheet" href="/static/CSS/userprofile.css">{% endblock cssfile%}
+
+
+{% block body %}
+  
+    <div class="project-container">
+        <div class="left-pane">
+            <img id="project-image" src="/static/images/profilepic.jpg" alt="Profile Image" class="project-image">
+            <div class="project-stats">
+                <p id="username">Shenaya Ali | BS in Computer Science</p> 
+               <p id="email"> <i class="fas fa-envelope"></i> ShenayaAli@gmail.com </p>
+                    </div>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fas fa-laptop-code"></i> Python
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fas fa-tools"></i> Testing
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fas fa-search"></i> SEO
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fas fa-globe"></i> Web Development
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 100%;"></div></div>
+                        </div>
+                    </div>
+            <p id="join-date">Joined at January 20, 2024</p>
+
+            
+
+            </div>
+
+
+        <div class="right-pane">
+            <div class="project-info">
+                <h1 id="project-title">About Shenaya Ali</h1>
+                <p id="project-description">"Hello, I'm Shenaya, an aspiring Web Developer with a passion for building intuitive and dynamic websites using Python and its powerful frameworks. Currently pursuing a Bachelor's Degree in Computer Science at Tech University, I am dedicated to mastering full-stack development, with a special focus on backend technologies." </p>
+                <p id="institute"> <b>Institute:</b> University of Management and Technology </p>
+                <p id="qualification"> <b>Qualification:</b> BS in Computer Science </p>
+                <p id="project-team"> <b>Country:</b> Pakistan </p>
+               
+             
+            </div>
+            <div class="uploaded-project">
+            <h2>Uploaded Projects</h2>
+            <!--Projects Section-->
+            <section>
+                
+                <div class="sec-1">
+                    <div class="row">
+                        <div class="r1">
+                        <a href="/projectView">
+                        <div class="p1">
+                            <div class="image">
+                                <img src="/static/images/event2.jpg" alt="Project-image">
+                            </div>
+                            <h3 class="title">
+                                Amazon clone using React
+                            </h3>
+                            <p class="description">
+                                Nowadays the first thing that someone does when they create a new business f.......
+                             </p>
+                                                    <div class="projectfooter">
+                                <div class="views">
+                                     <i class="fas fa-eye"></i>
+                                    2k
+                                </div>
+                                <div class="ratings">  
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star-half-alt"></i></span>
+                                </div>
+                             </div>
+                            </div>
+                         </div>
+                         
+                            
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <!--Add more project-->
+                
+            </section>
+            
+            </div>    
+    </div>
+
+    {% endblock body %}
+    {% block jsfile %}<script src="/static/JS/userprofile.js"></script>
+    <script src="/static/JS/basehtml.js"></script> 
+    {% endblock jsfile %}
+
+    

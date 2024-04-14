@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Event Form</title>
+    <link rel="stylesheet" href="{% static 'CSS/upload-event.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="fform">
+                <form id="form" class="main" method="post" enctype="multipart/form-data"  onsubmit="return validateForm()">
+                    {% csrf_token %}
+                    <h2> Upload Event</h2>
+                    <div class="form-control">
+                        <label for="title">Event Title</label>
+                        <input type="text" id="title" name="title">
+                        <p id="titleError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+                        <p id="desError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date">
+                        <p id="dateError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" >
+                        <p id="timeError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location">
+                        <p id="locError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="url">Link</label>
+                        <input type="text" id="url" name="url">
+                        <p id="urlError" class="error"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="upload">Event Image</label>
+                        <input type="file" class="upload-box" name="image" id="image">
+                        <p id="fileError"></p>
+                    </div>
+                    <button type="submit" value="Submit" class="">Submit</button>
+                </form>
+            </div>
+            <div class="image" style="background-image: url('{% static 'images/upload-project.jpg' %}'); background-repeat:no-repeat; background-size: cover; background-position: bottom-center;">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="{% static 'JS/upload-eventform.js' %}"></script>
+</html> 

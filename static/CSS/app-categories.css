@@ -1,0 +1,123 @@
+.section-two {
+    padding: 50px 0;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.section-two img {
+    width: 300px;
+}
+
+.section-two .row {
+    width: 100%;
+    display: flex;
+   
+}
+
+.section-two .row .col {
+    width: 40%;
+    padding: 1px 44px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.section-two h2 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.container{
+    height: 400px;
+}
+.banner-content h1{
+    margin-top: 140px;
+}
+
+.section-two p {
+    color: #ffffff80;
+}
+.section-two .col{
+    height: 1000px;
+    align-items: center;
+}
+
+.section-two .row .col img {
+    width: 500px;
+    height: 444px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+@media(max-width: 768px) {
+
+    .section-two {
+        min-height: auto;
+    }
+
+    .section-two .row {
+        flex-direction: column;
+    }
+
+    .section-two .row .col {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .section-two {
+
+        background-color: lavender;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .section-two img {
+        width: 80px;
+    }
+
+    .section-two .row {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .section-two .row .col {
+        width: 32%;
+
+        padding: 35px 25px;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    .section-two h2 {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+
+    .section-two p {
+        color: #ffffff80;
+    }
+
+    .section-two .row .col {
+        width: 24%;
+    }
+
+    .section-two .row .col img {
+        width: 140%;
+        background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
+
+.section-two .row .col {
+    background-color: white;
+}

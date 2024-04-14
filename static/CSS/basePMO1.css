@@ -1,0 +1,338 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4fa4ee; /* Adjust the color to fit your theme */
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+/* Notification Styles */
+.notification-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 20px; /* Spacing between notification icon and hamburger */
+}
+
+.notification-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.fa-bell {
+  color: white;
+  font-size: 24px;
+  position: relative;
+  padding: 10px;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff3d67;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+
+.notification-dropdown {
+  width:200px;
+  text-align: justify;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 2px 0px;
+  z-index: 1;
+  left: 40%; /* Center dropdown below the bell icon */
+  transform: translateX(-50%); /* Align center of dropdown with bell icon */
+  top: 60px;
+
+} 
+
+.notification-dropdown a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+.notification-dropdown a:hover {
+  background-color: #ddd;
+}
+.notification-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  right: 0;
+  z-index: 1;
+}
+
+/* Navbar Menu Styles */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #b756b7; /* Hover color */
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: inherit;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Profile Section */
+.navbar-profile {
+  position: relative;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  right: 0;
+  z-index: 1;
+}
+
+
+.dropdown-menu a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content.show, 
+.dropdown-menu.show, 
+.notification-dropdown.show {
+    display: block;
+   
+}
+
+.dropdown-menu.show {
+  width:216px;
+}
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .hamburger {
+      display: block; /* Show hamburger icon */
+      margin-left: 2px;
+  }
+  .logo{margin-right: 0px;}
+  
+  .dropbtn{
+    color: #4fa3ed;
+    font-weight: normal;
+  }
+
+
+  .header-right {
+      flex-grow: 1;
+      justify-content: flex-end;
+  }
+
+  .navbar-menu {
+      display: none; /* Hide menu items by default */
+      width: 100%; /* Full width */
+      flex-direction: column; /* Stack vertically */
+  }
+
+  .navbar-menu a, .dropdown-content a {
+      text-align: center; /* Center align menu items */
+  }
+
+  .notification-container {
+      position: absolute;
+      right: 60px; /* Adjust based on layout */
+      top: 0;
+  }
+
+  .navbar-profile {
+      position: absolute;
+      right: 10px;
+      top: 0;
+  }
+
+  .profile-pic{
+    margin-top: 17px;
+  }
+  .notification-container{
+    margin-top: 17px;
+    margin-right: 2px;
+  }
+  .navbar-menu.active {
+    display: flex;
+}
+
+.navbar-menu {
+  display: none; /* Hide menu items by default */
+  position: absolute;
+  top: 100%; /* Position below the navbar */
+  background-color: #4fa4ee; /* Adjust the background color */
+  width: 100%; /* Full width */
+}
+
+.navbar-menu.active {
+  
+  display: flex; /* Show menu items when active */
+  flex-direction: column; /* Stack vertically */
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Add shadow */
+}
+
+
+.navbar-menu a:hover {
+  color: #b756b7; /* Hover color */
+}
+
+/* Ensure the menu doesn't display initially */
+.navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 40%;
+    position: absolute;
+    top: 57px;
+    left: 35%;
+    background-color: rgba(237, 240, 240, 0.95);
+    z-index: 1000;
+}
+
+/* Make each link display as block to take the full width */
+.navbar-menu a {
+  color:rgb(79, 164, 238);
+  display: block;
+  text-align: center;
+
+}
+ 
+}
+/*updd*/
+
+/* Footer Styles */
+.site-footer {
+  background-color: #2c3e50;
+  color: #bdc3c7;
+  padding: 40px 0;
+  font-family: 'Jost', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  color: #ecf0f1;
+  margin-bottom: 20px;
+}
+
+.footer-section ul, .footer-section p {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.footer-section ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+  color: #ecf0f1;
+}

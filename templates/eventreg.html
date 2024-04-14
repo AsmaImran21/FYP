@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Events{% endblock title %}
+{% block eventactive %}active{% endblock eventactive %}
+{% block cssfile %}<link rel="stylesheet" href="/static/CSS/event.css">{% endblock cssfile %}
+
+
+
+{% block body %}
+    <!--Heading-->
+    <section class="sec-0" style="background-image: url('{% static 'images/header2.jpg' %}'); background-repeat:no-repeat; background-size: cover; background-position: bottom-center;">
+        <div class="header">
+            <h1>Events</h1>
+            <p>Explore events and competitions all around</p>
+        </div>
+         <!-- Search Bar -->
+         <div class="search-bar">
+            <input type="text" placeholder="Search in Projects" class="search-input">
+           <a href="/eventReg"><button class="search-btn"><i class="fas fa-search"></i></button></a>
+        </div>
+
+    </section>
+    <!--Events-->
+
+    
+    <section class="sec-1">
+        <div class="container1">
+            <h2 class="title">Technology Conference 2024</h2>
+            <div class="content">
+                <div class="image">
+                    <img src="/static/images/event1.jpg" alt="1">
+                </div>
+                <div class="textbox">
+                    <h3>Lorem ipsum</h3>
+                    <p class="venue">
+                        <i class="fas fa-map-marker-alt"></i>
+                        TechEx Convention Center, Silicon Valley
+                    </p>
+                    <p class="date">
+                        <i class="far fa-calendar-alt"></i>
+                        March 15-17
+                    </p>
+                    <p class="time">
+                        <i class="fa-solid fa-clock"></i>
+                        12:00 PM
+                    </p>
+                    <p class="description">
+                        This three-day conference will bring together professionals,
+                        and enthusiasts to explore the latest advancements in technology.
+                        The event will feature keynote speakers, panel discussions,
+                        hands-on workshops, and networking opportunities covering a wide
+                        range of topics such as artificial intelligence, cybersecurity and
+                        emerging technologies.
+                    </p>
+                    <p>Link: <a>https://mail.google.com/mail/u/0/</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="sec-2">
+        <div class="container1">
+            <h2 class="sec-title">Technology Conference 2024</h2>
+            <div class="content">
+                <div class="image">
+                    <img src="/static/images/event2.jpg" alt="2">
+                </div>
+                <div class="info">
+                    <h3>Lorem ipsum</h3>
+                    <p class="venue">
+                        <i class="fas fa-map-marker-alt"></i>
+                        TechEx Convention Center, Silicon Valley
+                    </p>
+                    <p class="date">
+                        <i class="far fa-calendar-alt"></i>
+                        March 15-17
+                    </p>
+                    <p class="time">
+                        <i class="fa-solid fa-clock"></i>
+                        12:00 PM
+                    </p>
+                    <p class="description">
+                        This three-day conference will bring together professionals,
+                        and enthusiasts to explore the latest advancements in technology.
+                        The event will feature keynote speakers, panel discussions,
+                        hands-on workshops, and networking opportunities covering a wide
+                        range of topics such as artificial intelligence, cybersecurity and
+                        emerging technologies.
+                    </p>
+                    <p>Link: https://mail.google.com/mail/u/0/</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-1">
+        <div class="container1">
+            <h2 class="title">Technology Conference 2024</h2>
+            <div class="content">
+                <div class="image">
+                    <img src="/static/images/event3.jpg" alt="1">
+                </div>
+                <div class="textbox">
+                    <h3>Lorem ipsum</h3>
+                    <p class="venue">
+                        <i class="fas fa-map-marker-alt"></i>
+                        TechEx Convention Center, Silicon Valley
+                    </p>
+                    <p class="date">
+                        <i class="far fa-calendar-alt"></i>
+                        March 15-17
+                    </p>
+                    <p class="time">
+                        <i class="fa-solid fa-clock"></i>
+                        12:00 PM
+                    </p>
+                    <p class="description">
+                        This three-day conference will bring together professionals,
+                        and enthusiasts to explore the latest advancements in technology.
+                        The event will feature keynote speakers, panel discussions,
+                        hands-on workshops, and networking opportunities covering a wide
+                        range of topics such as artificial intelligence, cybersecurity and
+                        emerging technologies.
+                    </p>
+                    <p>Link: https://mail.google.com/mail/u/0/</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="sec-2">
+        <div class="container1">
+            <h2 class="sec-title">Technology Conference 2024</h2>
+            <div class="content">
+                <div class="image">
+                    <img src="/static/images/event4.jpg" alt="2">
+                </div>
+                <div class="info">
+                    <h3>Lorem ipsum</h3>
+                    <p class="venue">
+                        <i class="fas fa-map-marker-alt"></i>
+                        TechEx Convention Center, Silicon Valley
+                    </p>
+                    <p class="date">
+                        <i class="far fa-calendar-alt"></i> March 15-17
+                    </p>
+                    <p class="time">
+                        <i class="fa-solid fa-clock"></i>
+                        12:00 PM
+                    </p>
+                    <p class="description">
+                        This three-day conference will bring together professionals,
+                        and enthusiasts to explore the latest advancements in technology.
+                        The event will feature keynote speakers, panel discussions,
+                        hands-on workshops, and networking opportunities covering a wide
+                        range of topics such as artificial intelligence, cybersecurity and
+                        emerging technologies.
+                    </p>
+                    <p>Link: https://mail.google.com/mail/u/0/</p>
+                </div>
+            </div>
+        </div>        
+    </section>
+   
+{% endblock body %}
+
+
+{% block jsfile %}<script src="https://unpkg.com/scrollreveal"></script>
+<script src="/static/JS/events.js"></script> {% endblock jsfile %}

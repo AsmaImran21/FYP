@@ -1,0 +1,594 @@
+/* General Styles for navigationbar */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, #6a1b9a, #88e0ef);
+  /* Updated gradient for a modern look */
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  /* Keep logo size consistent */
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  /* Make the brand name stand out */
+}
+
+.hamburger {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navbar Menu Styles */
+.navbar-menu {
+  display: flex;
+  margin-left: 600px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+.navbar-menu a:hover {
+  color: #b756b7;
+  /*for hover effect */
+}
+
+
+/* Profile Styles */
+.navbar-profile {
+  position: relative;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  cursor: pointer;
+  margin-right: 10px;
+ 
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    /* Keep the navbar horizontal */
+    justify-content: space-between;
+    /* Space between logo and hamburger icon */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* subtle shadow for depth */
+  }
+
+  .navbar-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+    /* Show hamburger icon */
+    margin-left: auto;
+    /* Push it to the right of the navbar-header */
+    font-size: 1.5em;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    /* Fixed position to cover the content */
+    top: 30px;
+    /* Adjust according to your navbar's height */
+    left: 0;
+    right: 0;
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    /* Fixed position to cover the content */
+    top: 60px;
+    /* Adjust according to your navbar's height */
+    left: 50%;
+    /* Centered horizontally */
+    transform: translateX(-50%);
+    /* Adjust position to the left by half of its width */
+    width: 100%;
+    /* Width of the menu */
+    background-color: rgba(127, 192, 245, 0.9);
+    /* Semi-transparent background */
+    backdrop-filter: blur(5px);
+    /* Subtle blur effect */
+    z-index: 5;
+    /* Ensure it's on top */
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: left;
+    /* Center items vertically */
+    align-items: left;
+    /* Center items horizontally */
+    text-align: left;
+    /* Center text for each link */
+    padding: 30px 0;
+    /* Padding top and bottom */
+  }
+
+  .navbar-menu a {
+    text-align: left;
+    /* Center align the links */
+    display: block;
+    /* Stack them vertically */
+    width: 100%;
+    /* Full width links */
+    color: #000000;
+    /* light color for contrast */
+    padding: 12px 20px;
+    /* comfortable touch targets */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* subtle separator */
+    transition: background-color 0.3s;
+    /* smooth transition for hover effect */
+  }
+
+  .navbar-profile {
+    order: 1;
+    /* This will ensure the profile comes after the hamburger menu */
+    position: absolute;
+    /* Position it absolutely within the navbar */
+    top: 10px;
+    right: 20px;
+  }
+
+  .navbar.responsive .navbar-menu {
+    display: block;
+    /* Display the menu when 'responsive' class is added */
+  }
+
+  .navbar-menu a:hover,
+  .navbar-menu a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* highlight on hover or focus */
+  }
+
+  .navbar-menu a:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* slightly different highlight when active */
+  }
+
+  .dropdown-menu {
+    z-index: 5;
+  }
+}
+
+
+
+
+
+
+/* settings for footer*/
+
+.site-footer {
+
+  background-color: #2c3e50;
+  /* Dark footer background */
+  color: #bdc3c7;
+  /* Light grey text color */
+  padding: 40px 0;
+  font-family: 'Jost', sans-serif;
+  border-bottom: none;
+  /* Remove the border */
+  margin-bottom: 0;
+  /* Remove any extra space */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0px;
+  padding: 0 15px;
+
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 0 20px;
+
+}
+
+.footer-section h3 {
+  color: #ecf0f1;
+  /* Lighter grey for heading */
+  margin-bottom: 20px;
+}
+
+.footer-section ul,
+.footer-section p {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.footer-section ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.nav-item{
+  margin-bottom: 10px;
+}
+.footer-section ul li a:hover {
+  color: #ecf0f1;
+  /* Lighter color on hover */
+}
+
+.footer-container .copyright {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 20px;
+  color: #95a5a6;
+  /* Grey text for copyright */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+  }
+}
+
+/*Notification*/
+/* Notification bell container */
+.notification-container {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Notification bell icon */
+.fa-bell {
+  color: white; /* Change as needed */
+  font-size: 24px; /* Change as needed */
+  position: relative;
+  padding: 10px;
+}
+
+/* Notification count badge */
+.notification-count {
+  position: absolute;
+  top: -5px; /* Change as needed */
+  right: -5px; /* Change as needed */
+  background-color: #ff3d67; /* Notification color */
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Notification dropdown menu styles */
+.notification-dropdown {
+  display: none; /* Hide by default */
+  position: absolute;
+  right: 0;
+  background-color: #fff; /* Dropdown background color */
+  min-width: 220px; /* Width of dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Dropdown shadow */
+  z-index: 1;
+  border-radius: 4px; /* Rounded corners for dropdown */
+}
+
+.notification-dropdown a {
+  color:#333; /* Text color */
+  padding: 12px 16px;
+  text-align: justify;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #f0f0f0; /* Separator lines */
+}
+
+.notification-dropdown a:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+
+.notification-dropdown a:hover {
+  background-color: #f6f6f6; /* Hover background color */
+}
+/* Ensure dropdowns are visible on hover over the container */
+.notification-container:hover .notification-dropdown,
+.navbar-profile:hover .dropdown-menu {
+  display: block;
+}
+
+.fa-message{
+  margin-right: 3px;
+  color:#7883ea;
+}
+
+/* Responsive styles if needed */
+@media (max-width: 768px) {
+  .notification-container, .navbar-profile {
+    padding: 10px;
+  }
+}
+
+
+/* Dropdown Link Styles */
+.nav-item.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content Styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px; /* Set the width of the dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Dropdown Link Styles */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Dropdown Link Hover Styles */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.nav-item.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Enhanced Navbar Profile Dropdown */
+.navbar-profile .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden; /* Hide the overflow */
+}
+
+/* Enhanced Navbar Profile Dropdown Link Styles */
+.navbar-profile .dropdown-menu a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+/* Enhanced Navbar Profile Dropdown Link Hover Styles */
+.navbar-profile .dropdown-menu a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover/click */
+.navbar-profile:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .dropdown-content, .navbar-profile .dropdown-menu {
+    width: 100%; /* Full width for mobile devices */
+    box-shadow: none; /* Disable shadow on mobile */
+  }
+}
+/* Profile Dropdown Enhancements */
+.navbar-profile .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden; /* Ensures the border-radius applies to child elements */
+}
+
+.navbar-profile .dropdown-menu a {
+  color: #333333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.navbar-profile .dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
+
+.navbar-profile:hover .dropdown-menu {
+  display: block; /* Display dropdown on hover */
+}
+
+/* Projects Dropdown Enhancements */
+.navbar-menu .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-menu .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 200px; /* Larger width for project dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden; /* Ensures the border-radius applies to child elements */
+}
+
+.navbar-menu .dropdown .dropdown-content a {
+  color: #333333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.navbar-menu .dropdown .dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+.navbar-menu .dropdown:hover .dropdown-content {
+  display: block; /* Display dropdown on hover */
+}
+
+.navbar-menu .dropdown .fa-caret-down {
+  margin-left: 5px;
+}
+
+/* Common Dropdown Enhancements */
+.dropdown-content {
+  border-radius: 4px;
+}
+
+/* Improve visibility against the background */
+.dropdown-content a {
+  background-color: #ffffff;
+}
+
+/* Make sure dropdown content has a higher index than other elements */
+.dropdown-content {
+  z-index: 1000;
+}
+
+/* Clearfix for floated elements within dropdowns */
+.dropdown-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*for pmo*/
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: inherit; /* Inherit navbar background */
+  color: white; /* Adjust to match the navbar text color */
+  padding: 10px 15px; /* Match the padding of other nav-items */
+  font-size: 16px; /* Match the font size of other nav-items */
+  border: none; /* Remove border */
+  cursor: pointer; /* Cursor pointer for clickable dropdown */
+  outline: none; /* Remove focus outline */
+  font-weight: bold;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block; /* Inline-block for alignment with other nav-items */
+}
+
+/* Dropdown Content (Hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9; /* Background of dropdown items */
+  min-width: 160px; /* Set a min-width if necessary */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Dropdown shadow */
+  z-index: 1; /* Ensure it's on top */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black; /* Text color for dropdown items */
+  padding: 12px 16px; /* Padding for dropdown items */
+  text-decoration: none; /* No underline */
+  display: block; /* Block level for full-width clickable area */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content,
+.dropdown-menu{
+  width:200px;
+  opacity: 90%;
+ 
+
+}
+
+/*
+.dropbtn{
+  margin-top: 2px;
+}*/
+
+.dropbtn:hover{
+  color: #b756b7;
+}
+
+#mitem{
+  margin-top: 5px;
+}
+
+.navbar-menu{
+    margin-left: 450px;
+}
+
+
+
+#mitem{
+  margin-top: 5px;
+
+}
+

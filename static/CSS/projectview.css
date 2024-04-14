@@ -1,0 +1,425 @@
+/* Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Document */
+body {
+  font-family: 'Jost', sans-serif;
+  background: #f8f8f8; /* Lighter shade for the background */
+  color: #333; /* Keeping text in black for readability */
+  line-height: 1.6;
+}
+
+/* Project Container */
+.project-container {
+  display: flex;
+  margin: 40px auto;
+  max-width: 1200px;
+  background: #fff; /* White background for the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+}
+
+/* Left Pane */
+.left-pane {
+  width: 30%;
+  background-color: #dfd4f5; /* A light purple shade for the left pane background */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* Project Image */
+.project-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 5px solid #fff; /* White border for the image */
+}
+
+/* Project Stats (views and likes) */
+.project-stats {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.views, .likes {
+  display: block;
+  font-size: 14px;
+  color: #6a1b9a; /* Purple color for the stats */
+  margin: 5px 0;
+}
+
+/* Skills Section */
+
+.skills {
+  width: 100%; /* Use full width of the left pane */
+  padding-left: 20px;
+  margin-top: 20px;
+  text-align: left; /* Align text to the left */
+}
+
+.skill-list {
+  padding-left: 0;
+  list-style: none;
+  padding-top: 10px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start */
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.skill-item i {
+  color: #6a1b9a; /* Matching the purple theme */
+  margin-right: 10px;
+}
+
+.skill-bar {
+  flex-grow: 1;
+  margin-left: 40px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 10px;
+  background-color: #6a1b9a; /* Matching the purple theme */
+}
+/* Languages Section */
+.languages {
+  width:100%;
+  padding-left: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.language-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.language-list li {
+  display: flex;
+  align-items: center;
+  background-color: #f0e8ff; /* Light purple background */
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.language-list li i {
+  color: #6a1b9a; /* Matching the purple theme */
+  margin-right: 5px;
+}
+
+/* Right Pane */
+.right-pane {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* White background for the right pane */
+}
+
+/* Project Information */
+.project-info {
+ 
+  padding-bottom: 20px;
+
+}
+
+.project-info h1 {
+  font-size: 28px;
+  color: #6a1b9a; /* Purple color for the title */
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #333; 
+  margin-bottom: 10px; /* Reduced spacing */
+  text-align: justify;
+  font-size: 18px; /* Adjusted font size for readability */
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+}
+
+/* Additional Info */
+.additional-info p {
+  font-size: 16px;
+  color: #333; 
+  margin: 5px 0;
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+}
+
+/* Tabs */
+
+/* Tabs Styling */
+/* Tabs Styling */
+.tabs {
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+  max-height: auto;
+}
+
+.tab-button {
+  background: #e0e0e0; /* Light grey background for tabs */
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for tabs */
+  color: #333; /* Black text color for tabs */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase; /* Make the tab titles uppercase */
+  font-weight: bold;
+  position: relative; /* Needed for positioning the underline */
+}
+
+
+
+/* Underline for active tab */
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+  left: 0;
+  bottom: -1px; /* Positioning the underline just below the tab */
+  width: 100%;
+  height: 2px;
+  background-color: #6a1b9a; /* Color of the underline */
+}
+
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #fff; /* White background for content */
+}
+
+.active-tab {
+  display: block;
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+}
+
+/* Ratings Tab Content */
+#ratings {
+  display: none; /* Initially hidden */
+  padding: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.rating-scale {
+  display: flex;
+  justify-content: space-between;
+  max-width: 250px; /* Adjust as needed */
+}
+
+.rating-scale input[type="radio"] {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Multimedia Section Styling */
+/* Multimedia Section Styling */
+#multimedia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Space between items */
+  justify-content: flex-start; /* Align items to the start of the main axis */
+  padding: 20px;
+}
+
+.media-item {
+  text-align: center; /* Center-align the text descriptions */
+  width: calc(50% - 30px); /* Adjust width to account for the gap, assuming a 20px gap */
+  margin-bottom: 20px; /* Space between rows */
+}
+
+.media-item img {
+  width: 100%; /* Make images take full width of .media-item container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for attractiveness */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.media-item img:hover {
+  transform: scale(1.03); /* Slightly enlarge images on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+}
+
+
+/* Ratings Form Styling */
+#ratingsForm {
+  font-size: 14px; /* Decreased font size */
+}
+
+#ratings .question {
+  margin-bottom: 15px; /* Spacing between questions */
+}
+
+#ratings .question label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#ratings .rating-scale {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px; /* Adjust the width as needed */
+}
+
+#ratings .rating-scale input[type="radio"] {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
+iframe{
+  width:100%;
+   height:500px; 
+   border: none;
+}
+
+#booklet button,
+#code button{
+  color: white; /* White text */
+  padding: 8px 20px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer/hand icon */
+  font-size: 16px; /* Text size */
+  font-family: 'Jost', sans-serif;
+  margin-top: 10px;
+  margin-bottom:0px;
+  margin-left:40%;
+  font-weight: bold;
+  height: 60px;
+  width: 200px;
+  background-color: green;
+}
+
+
+ /* Submit button */
+ input[type=submit] {
+  margin-left: 80%;
+  background-color: #3a1c6b; /* Green background */
+  color: white; /* White text */
+  padding: 8px 20px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer/hand icon */
+  font-size: 16px; /* Text size */
+}
+
+/* Change background color of the submit button on mouse-over */
+input[type=submit] :hover {
+  background-color: #351553; /* Darker shade of green */
+}
+
+/* Styling for the average rating section */
+.average-rating {
+  margin-top: 20px;
+  font-size: 16px; /* Adjust font size for average rating */
+}
+
+.average-rating .stars {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.average-rating .stars::before {
+  content: '★★★★★';
+  font-size: 24px; /* Size of the star icons */
+  color: #d39c10; /* Color of the unfilled stars */
+}
+
+.average-rating .stars::after {
+  content: '★★★★★';
+  font-size: 24px;
+  color: #ffc107; /* Color of the filled stars */
+  position: absolute;
+  overflow: hidden;
+  width: 0; /* Controlled by JS */
+}
+.github{
+  padding: 10px;
+  color:#fff;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: darkgreen;
+  margin-top: -10px;
+  margin-bottom: 31px;
+  margin-left: 30px;
+  width: 150px;
+  outline: none;
+}
+
+/* For resposive design */
+
+@media (max-width: 768px)  {
+  .project-container {
+    flex-direction: column;
+  }
+
+  .left-pane, .right-pane {
+    width: 100%;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    margin-bottom: 10px; /* Add spacing between tabs on smaller screens */
+  }
+
+
+  .skill-bar {
+    width: auto;
+  }
+
+  .language-list {
+    justify-content: center;
+  }
+}

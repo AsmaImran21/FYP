@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ project.title }}{% endblock title %}
+
+{% block projectactive %}active{% endblock projectactive %}
+
+{% block cssfile %}
+<link rel="stylesheet" href="{% static 'CSS/studentprojectview.css' %}">
+<!--<link rel="stylesheet" href="{% static 'CSS/projectviewregistered.css' %}">-->
+{% endblock cssfile %}
+
+{% block body %}
+<div class="report-problem-container">
+    <a href="/problem-view" class="report-problem-link">
+        <i class="fa fa-question-circle"></i> Report a Problem </a>
+   </div>
+</div>
+<div class="project-container">
+    
+    <div class="left-pane">
+        <img id="project-image" src="{{ project.resultcard.url }}" alt="Project Image" class="project-image">
+        
+        <div class="project-metrics">
+            <span id="project-views"><i class="fas fa-eye"></i> 123 Views</span>
+            <span id="project-likes"><i class="fas fa-thumbs-up"></i> 45 Likes</span>
+        </div>
+        
+        <div class="skills">
+            <h3>Skills Required</h3>
+            <ul class="skill-list">
+                {% for skill in project.skills.all %}
+                    <li class="skill-item">
+                        <span class="skill-name">{{ skill.name }}</span>
+                        <span class="skill-percentage">{{ skill.percentage }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="languages">
+            <h3>Languages Used</h3>
+            <ul class="language-list">
+                {% for language in project.languages.all %}
+                    <li>{{ language.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <!-- New Technologies section -->
+        <div class="technologies">
+            <h3>Technologies Used</h3>
+            <ul class="technology-list">
+                {% for technology in project.technologies.all %}
+                    <li class="technology-item"> <span class="skill-name">{{ technology.name }}</span>
+                        <span class="skill-percentage">{{ technology.version }}</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        
+    </div>
+    
+    <div class="right-pane">
+        
+        <div class="project-info">
+            <h1 id="project-title">{{ project.title }}</h1>
+            <p id="project-description">{{ project.description }}</p>
+            <p id="project-team"><b>Team Members:</b> {{ project.team_members }}</p>
+            <p id="project-type"><b>Project Type:</b> {{ project.get_project_type_display }}</p>
+            <p id="uploader-name"><b>Uploaded by:</b> {{ project.uploader_name }}</p>
+            <p id="upload-date"><b>Upload Date:</b> {{ project.upload_date|date:"d-m-Y" }}</p>
+            <p id="github"><i class="fab fa-github"></i> <b>GitHub:</b> <a href="{{ project.githuburl }}">{{ project.githuburl }}</a></p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab-button" data-tab="multimedia">Multimedia</button>
+            <button class="tab-button" data-tab="booklet">Booklet</button>
+            <button class="tab-button" data-tab="ratings">Ratings</button>
+        </div>
+        
+        <!-- Tab Content Containers -->
+        <div id="multimedia" class="tab-content">
+            <!-- Multimedia content here -->
+            {% for multimedia in multimedia_files %}
+            {% if multimedia.type == 'image' %}
+                <img src="{{ multimedia.file.file.url }}" alt="Multimedia Image">
+            {% elif multimedia.type == 'pdf' %}
+                <!-- Handle PDF rendering -->
+            {% endif %}
+        {% endfor %}
+        </div>
+        
+        <div id="booklet" class="tab-content">
+            <!-- Booklet content here -->
+            <div class="pdf-container">
+                {% if booklet_url %}
+                    <iframe src="{{ project.booklet.url }}" width="600" height="400"></iframe>
+                    <a href="{{ project.booklet.url }}" class="download-option" download>Download Booklet</a>
+                {% endif %}
+            </div>
+            
+        </div>
+        
+        <div id="ratings" class="tab-content">
+            <!-- Ratings content will be filled with JS (shown in the provided script) -->
+            <form id="ratingsForm">
+                <!-- Ratings form will be populated dynamically -->
+            </form>
+            <div class="average-rating">
+                <span class="stars" style="width: 0%;">★★★★★</span>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+</div>
+
+
+{% endblock body %}
+
+{% block jsfile %}
+<script src="{% static 'JS/projectviewfile.js' %}"></script>
+{% endblock jsfile %}

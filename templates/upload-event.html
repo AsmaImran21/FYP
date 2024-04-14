@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Event Form</title>
+    <link rel="stylesheet" href="/static/CSS/upload-event.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="fform">
+                <form id="form" class="main" onsubmit="return validateForm()">
+                    <h2> Upload Event</h2>
+                    <div class="form-control">
+                        <label for="title">Event Title</label>
+                        <input type="text" id="title" name="title">
+                        <p id="titleError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+                        <p id="desError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date">
+                        <p id="dateError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" >
+                        <p id="timeError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location">
+                        <p id="locError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="upload">Event Image</label>
+                        <input type="file" class="upload-box" name="upload" id="upload">
+                        <p id="fileError"></p>
+                    </div>
+                    <button type="submit" value="Submit" class="">Submit</button>
+                </form>
+            </div>
+            <div class="image">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="upload-event.js"></script>
+
+</html> 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD SECTION -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE BLOCK -->
+<title>{% block title %}PSEFC{% endblock title %} </title>
+
+<!-- CSS FILES BLOCK -->
+{% block cssfile%} {% endblock cssfile%}
+
+<!-- COMMON CSS FILES -->
+<link rel="stylesheet" href="/static/CSS/baseadmin.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<!-- BODY SECTION -->
+
+<!-- NAV BAR -->
+<body>
+  <div class="navbar" id="myNavbar">
+    <div class="navbar-header">
+        <a href="/homeAdmin"> <img src="/static/images/logo (2).png" alt="logo" class="logo"> </a>
+        <button class="hamburger" onclick="toggleNavbar()">&#9776;</button>
+    </div>
+    <div class="navbar-menu">
+       
+            <div class="notification-container">
+              <i class="fa fa-bell" onclick="toggleNotificationDropdown()"></i>
+              <span class="notification-count">1</span>
+              <!-- Notification Dropdown Menu -->
+              <div class="notification-dropdown">
+                <a href="/problemsList">  <i class="fa-solid fa-message"></i>Shenaya Ali has reported a problem</i></a>
+                <!-- You can add more notification items here -->
+              </div>
+            </div>
+        <a href="/homeAdmin" class="nav-item">Home</a>
+        <a href="/homeAdmin#projectcategories" class="nav-item">Projects</a>
+        <a href="/event" class="nav-item">Events</a>
+        <a href="/problemsList" class="nav-item">Reported Problems</a>
+        <a href="/aboutUsAdmin" class="nav-item">About Us</a>
+  
+    </div>
+    <div class="navbar-profile">
+        <img src="/static/images/profilepic.jpg" alt="Profile" class="profile-pic" onclick="toggleDropdown()"> <!-- Add your profile image path here -->
+        <div class="dropdown-menu">
+            <a href="/userProfile"><i class="fa fa-user"></i> View Profile</a>
+            <a href="/changePassword1"><i class="fa fa-key"></i> Change Password</a>
+            <a href="/logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+</div>
+   
+<!-- SPECIFIC CONTENT FOR EACH PAGE WILL BE DISPLAYED HERE -->
+{% block body %}
+{% endblock body %}
+
+
+<!--  FOOTER FOR EACH PAGE -->
+      <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li class="nav-item"><a href="/homeAdmin">Home</a></li>
+                    <li class="nav-item"><a href="/homeAdmin#projectcategories">Projects</a></li>
+                    <li class="nav-item"><a href="/event">Events</a></li>
+                    <li class="nav-item"><a href="/problemsList">Reported Problems</a></li>
+                    <li class="nav-item"><a href="/aboutUsAdmin">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="/homeAdmin#faq">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: contact@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section copyright">
+                <p>Copyright &copy; 2024 Project Showcase to Empower Future Creators. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- JS FILES BLOCK -->
+{% block jsfile %} {% endblock jsfile %} 
+  <!-- JS FILES Common for all pages -->  
+<script src="/static/JS/basehtml.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+*{
+max-width: 100%;
+}
+.dropbtn{
+  margin-top:100px;
+}
+
+.approval-button button {
+    color: white; /* White text */
+    padding: 8px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer/hand icon */
+    font-size: 16px; /* Text size */
+    font-family: 'Jost', sans-serif;
+    margin-top: 10px;
+    margin-bottom:0px;
+  }
+
+  .approve{
+    background-color: green;
+    margin-left: 80%;
+    
+  }
+
+
+  .reject{
+    background-color: rgb(221, 8, 8);
+    margin-left: 12px;
+    
+  }
+
+  .project-container{
+    margin-top: 10px;
+  }

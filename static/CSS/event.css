@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+/*header Image*/
+.sec-0 {
+    background: #fff;
+}
+
+.header {
+    width: 99%;
+    height: 350px;
+}
+
+.header p {
+    color: #fff;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 6px;
+    margin-top: 15px;
+
+}
+
+.header h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 69px;
+    margin-top: 95px;
+}
+
+/*Events*/
+section {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    color: #000;
+}
+
+section .sec-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 3em;
+    margin-bottom: 50px;
+    margin-top: 51px;
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.content .image {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content .image img {
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .textbox {
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    margin-left: 20px;
+    padding: 40px;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-70px, 50px);
+}
+
+.content .textbox h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.sec-title {
+    font-size: 2em;
+    margin-top: 84px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+/* Positioning the search bar within the header */
+.sec-0 .header {
+    position: relative;
+    /* For absolute positioning of children */
+}
+
+/* Styling the search bar */
+.search-bar {
+    width: 650px;
+    position: absolute;
+    top: 75%;
+    /* Adjust as necessary */
+    transform: translateY(-50%);
+    /* Center vertically */
+    display: flex;
+    align-items: center;
+    background: #fff;
+    /* Assuming a white background */
+    border-radius: 20px;
+    /* Rounded corners */
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Adding some shadow for depth */
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 20px 0 0 20px;
+    /* Rounded corners on the left side */
+    flex-grow: 1;
+    /* Allow input to grow */
+}
+
+.search-btn {
+    padding: 10px;
+    background: #605399;
+    /* Example button color */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    /* Rounded corners on the right side */
+    color: white;
+    /* Icon color */
+}
+
+.search-btn .fas {
+    display: block;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-bar {
+        right: 10px;
+        /* Adjust for smaller screens */
+        top: 100%;
+        /* Move below the header */
+        width: calc(100% - 20px);
+        /* Full width with some padding */
+    }
+
+    .search-input {
+        flex-grow: 1;
+    }
+}
+
+.info {
+    width: 700px;
+    margin-left: 50px;
+}
+
+.info h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}

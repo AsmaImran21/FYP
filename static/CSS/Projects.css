@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    max-width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: #bbbaba;
+}
+
+.header{
+    width: 99%;
+    height: 548px;
+    margin-top: -102px;
+}                          
+h1{
+    color: #fff;
+    text-align: center;
+    font-size: 69px;
+    margin-top: 100px;
+}
+.title1{
+    margin-top: 300px;
+}
+
+
+/* Styling the search bar */
+.search-bar {
+    margin-left:350px;
+     margin-top: 50px;
+     margin-bottom: 14px;
+     width:650px;
+     position: relative;
+     transform: translateY(-50%); /* Center vertically */
+     display: flex;
+     align-items: center;
+     background: #fff; /* Assuming a white background */
+     border-radius: 20px; /* Rounded corners */
+     padding: 5px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adding some shadow for depth */
+ }
+ 
+ .search-input {
+     border: none;
+     outline: none;
+     padding: 10px;
+     font-size: 1em;
+     border-radius: 20px 0 0 20px; /* Rounded corners on the left side */
+     flex-grow: 1; /* Allow input to grow */
+ }
+ 
+ .search-btn {
+     padding: 10px;
+     background: #605399; /* Example button color */
+     border: none;
+     outline: none;
+     cursor: pointer;
+     border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+     color: white; /* Icon color */
+ }
+ 
+ .search-btn .fas {
+     display: block;
+ }
+ 
+ /* ... rest of your CSS ... */
+ 
+ /* Responsive adjustments */
+ @media (max-width: 768px) {
+     .search-bar {
+         right: 10px; /* Adjust for smaller screens */
+         top: 100%; /* Move below the header */
+         width: calc(100% - 20px); /* Full width with some padding */
+     }
+     .search-input {
+         flex-grow: 1;
+     }
+ }
+ .section{
+    margin-top: 0px;
+ }
+ 
+/*Projects Section*/
+.sec-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -17px;
+    background: #f0e9e9;
+    padding-left: 36px;
+    padding-top: 50px;
+    padding-right: 66px;
+    padding-bottom: 131px;
+    height: 100%;
+}  
+.row{
+   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.p1{
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+}  
+.title{
+    margin-bottom: 10px;
+}
+.description{
+    margin-bottom: 10px;
+    
+}
+.collaborators, .name,.skills,.cgpa,.gpa{
+    margin-bottom: 5px;
+}
+.image img{
+    height: 350px;
+    width: 580px;
+    margin-top: -7px;
+    margin-left: -4px;
+    margin-right: 3px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}  
+.footer{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 125px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+
+/* Responsive Styles for Header */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 42px; /* Adjust font size for smaller screens */
+        margin-top: 60px;
+    }
+}
+
+/* Responsive Styles for Projects Section */
+@media (max-width: 768px) {
+    .sec-1 {
+        flex-direction: column; /* Stack columns for smaller screens */
+        padding: 30px; /* Adjust padding for smaller screens */
+        margin-top: -95px;
+    }
+
+    .row {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .p1 {
+        width: 100%; /* Make the projects section full width on smaller screens */
+    }
+
+    .image img {
+        width: 100%; /* Make the image full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}  
+/*header Image*/
+.sec-0 {
+    background: #fff;
+}
+
+.header {
+    width: 99%;
+    height: 350px;
+}
+
+.header p {
+    color: #fff;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 6px;
+    margin-top: 15px;
+
+}
+
+.header h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 69px;
+    margin-top: 95px;
+}
+
+
+/* Styling the search bar */
+.search-bar {
+    width: 650px;
+    position: absolute;
+    top: 41%;
+  
+    transform: translateY(-50%);
+    /* Center vertically */
+    display: flex;
+    align-items: center;
+    background: #fff;
+   
+    border-radius: 20px;
+    /* Rounded corners */
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /*  shadow for depth */
+    margin-top: 0px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 20px 0 0 20px;
+    /* Rounded corners on the left side */
+    flex-grow: 1;
+    /* Allow input to grow */
+}
+
+.search-btn {
+    padding: 10px;
+    background: #605399;
+    /* Example button color */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    /* Rounded corners on the right side */
+    color: white;
+    /* Icon color */
+}
+
+.search-btn .fas {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        right: 10px;
+        /* Adjust for smaller screens */
+        top: 100%;
+        /* Move below the header */
+        width: calc(100% - 20px);
+        /* Full width with some padding */
+    }
+
+    .search-input {
+        flex-grow: 1;
+    }
+}
+
+/* Positioning the search bar within the header */
+.sec-0 .header {
+    position: relative;
+    /* For absolute positioning of children */
+}

@@ -1,0 +1,175 @@
+{% extends "baseunregistered.html" %}
+{% load static %}
+{% block title %}Hardware Projects{% endblock title %}
+
+{% block cssfile%}
+<link rel="stylesheet" href="/static/CSS/homeunreg.css">
+<link rel="stylesheet" href="/static/CSS/app-categories.css">
+{% endblock cssfile%}
+
+
+
+{% block body %}
+<header
+  style="background-image: url('{% static 'images/h2.jpg' %}'); background-repeat:no-repeat; background-size: cover; background-position: bottom-center;">
+
+
+  <div class="container">
+    <div class="banner-content">
+      <h1>Hardware Projects</h1>
+      <p>Explore hardware based from the world</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search in Projects" class="search-input">
+      <button class="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+
+  </div>
+</header>
+<!-- Mobile Development Section-->
+<section class="section-two">
+  <div class="container">
+   
+    <div class="row">
+      <div class="col">
+        <a href="/projects">
+          <img src="/static/images/java.png" alt="">
+        </a>
+      </div>
+      <div class="col">
+        <a href="/projects">
+          <img src="/static/images/kotlin.png" alt="">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="section-two">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="/projects">
+          <img src="/static/images/swift.png" alt="">
+        </a>
+      </div>
+      <div class="col">
+        <a href="/projects">
+          <img src="/static/images/flutter.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-two">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="/projects">
+          <img src="/static/images/Python.png" alt="">
+        </a>
+      </div>
+      <div class="col">
+        <a href="/projects">
+          <img src="/static/images/jquery.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recommendation Section -->
+<section class="section-three">
+  <div class="container">
+    <h1>TOP-RATED PROJECTS</h1>
+    <div class="horizontal-scroll">
+
+      <div class="col">
+        <a href="/projectView">
+          <img src="/static/images/1.jpg" alt="">
+          <p class="image-description">Project Showcase</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="/projectView">
+          <img src="/static/images/2.jpg" alt="">
+          <p class="image-description">Project Showcase</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="/projectView">
+          <img src="/static/images/3.jpg" alt="">
+          <p class="image-description">Project Showcase</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="/projectView">
+          <img src="/static/images/4.jpeg" alt="">
+          <p class="image-description">Project Showcase</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="/projectView">
+          <img src="/static/images/3.jpg" alt="">
+          <p class="image-description">Project Showcase</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+
+<section class="faq-section" id="faq">
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <!-- FAQ Item 1 -->
+    <div class="faq-item" onclick="toggleFaq('faq1')">
+      <h4>What is 'Project Showcase to Empower Future Creators'? <span class="arrow">&#9660;</span></h4>
+      <p id="faq1" class="faq-answer">It's an online platform where students can submit and showcase their final year
+        projects, fostering a community of innovation and collaboration.</p>
+    </div>
+    <!-- FAQ Item 2 -->
+    <div class="faq-item" onclick="toggleFaq('faq2')">
+      <h4>Is there any fee associated with submitting a project?<span class="arrow">&#9660;</span></h4>
+      <p id="faq2" class="faq-answer">No, project submission is completely free of charge.</p>
+    </div>
+    <!-- FAQ Item 3 -->
+    <div class="faq-item" onclick="toggleFaq('faq3')">
+      <h4>Can employers access the project showcase to find potential hires? <span class="arrow">&#9660;</span></h4>
+      <p id="faq3" class="faq-answer">Yes, employers are encouraged to explore the showcase to discover talented
+        individuals whose projects align with their company’s needs.</p>
+    </div>
+    <!-- FAQ Item 4-->
+    <div class="faq-item" onclick="toggleFaq('faq4')">
+      <h4>Can I edit or update my project details after submission?<span class="arrow">&#9660;</span></h4>
+      <p id="faq4" class="faq-answer">No! The website aims to display one-time uploaded Final year Projects that are
+        approved by supervisor. Any ammendments in projects are not accepted.</p>
+    </div>
+    <!-- FAQ Item 5 -->
+    <div class="faq-item" onclick="toggleFaq('faq5')">
+      <h4>Is there a limit to the number of projects I can submit? <span class="arrow">&#9660;</span></h4>
+      <p id="faq5" class="faq-answer">While there is no strict limit, we encourage quality over quantity. Each project
+        should be submitted only once. Moreover, in case of team-projects, only one memeber can upload the project.</p>
+    </div>
+    <!-- FAQ Item 6 -->
+    <div class="faq-item" onclick="toggleFaq('faq6')">
+      <h4>Are international students’ projects included in the showcase? <span class="arrow">&#9660;</span></h4>
+      <p id="faq6" class="faq-answer">Yes, we welcome submissions from students around the globe to build an
+        international community of future creators.</p>
+</section>
+
+
+
+{% endblock body%}
+
+
+{% block jsfile %}
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/static/JS/Homepageunregistered.js"></script>
+<script src="/static/JS/app-categories.js"></script> {% endblock jsfile %}

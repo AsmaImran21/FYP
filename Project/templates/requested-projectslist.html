@@ -1,0 +1,53 @@
+{% extends "basepmo.html" %}
+{% load static %}
+{% block title %}Requested Projects{% endblock title %}
+{% block cssfile %}
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/requested-projects.css' %}">
+{% endblock cssfile %}
+{% block body %}
+
+<section>
+    <div class="container">
+        <div class="heading">Requested Projects</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Project Title</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>View</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                <tr class="row">
+                    <td>{{ project.id }}</td>
+                    <td>{{ project.title }}</td>
+                    <td>{{ project.get_project_type_display }}</td>
+                    <td>{{ project.upload_date|date:"d M Y" }}</td>
+                    <td class="view"><a href="{% url 'requestedprojectview' project_id=project.id %}">View</a></td>
+                    <td>
+                        <div class="status">
+                            {% if project.status == 0 %}
+                            <a href="{% url 'requestedproject_accepted' project.id %}" class="accept-button">Accept</a>
+                            <a href="{% url 'requestedproject_rejected' project.id %}" class="reject-button">Reject</a>
+                            {% elif project.status == 1 %}
+                            <button class="accept-button" disabled="disabled">Accept</button>
+                            {% else %}
+                            <button class="reject-button" disabled="disabled">Reject</button>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+                <tr class="spacing-row">
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock body %}

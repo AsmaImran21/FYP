@@ -1,0 +1,146 @@
+{% extends "basepmo.html" %}
+{% load static %}
+{% block title %}Project Showacase to Empower Future Creators{% endblock title %}
+{% block projectactive %}active{% endblock projectactive %}
+{% block cssfile%} <link rel="stylesheet" href="/static/CSS/projectview.css">
+ <link rel="stylesheet" href="/static/CSS/pmoprojectview.css">
+
+{% endblock cssfile%}
+
+
+
+{% block body %}
+
+<div class="approval-button">
+    <a href="/pmoProjectView"><button type="submit" class="approve" id="approvebtn" >Approve</button></a>
+    <button type="submit" class="reject">Reject</button>
+</div>
+
+  
+    <div class="project-container">
+        <div class="left-pane">
+            <img id="project-image" src="/static/images/projectlogo.jpg" alt="Project Image" class="project-image">
+            <div class="project-metrics">
+                <span id="project-views"><i class="fas fa-eye"></i> 123 Views</span> <!-- ...for eye icon... -->
+                <span id="project-likes"><i class="fas fa-thumbs-up"></i> 45 Likes</span> <!-- ...for like icon... -->
+            </div>
+            <div class="skills">
+                <h3>Skills Required</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <i class="fas fa-palette"></i> Visual Design
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </li>
+                    <li class="skill-item">
+                        <i class="fas fa-bug"></i> Testing and Debugging
+                        <div class="skill-bar"><div class="skill-level" style="width: 65%;"></div></div>
+                    </li>
+                    <li class="skill-item">
+                        <i class="fas fa-search"></i> SEO
+                        <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="languages">
+                <h3>Languages Used</h3>
+                <ul class="language-list">
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fab fa-js"></i> JavaScript</li>
+                    <li><i class="fab fa-html5"></i> HTML</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-pane">
+            <div class="project-info">
+                <h1 id="project-title">Project Showcase to Empower Future Creators</h1>
+                <p id="project-description">"Project Showcase to Empower Future Creators" is a comprehensive web platform designed to connect students, especially final year ones, with senior peers' project experiences. It helps them gain insights into favored projects, offers inspiration, and facilitates showcasing their work.  It helps them gain insights into favored projects, offers inspiration, and facilitates showcasing their work. </p>
+                <p id="project-team"> <b>Team Members:</b> Meerab Mir, Asma Imran, Eman Shahbaz</p>
+                <p id="project-type"> <b>Project Type:</b> Web Development</p>
+                <p id="uploader-name"><b>Uploaded by:</b> Eman Shahbaz</p>
+                <p id="upload-date"><b>Upload Date: </b> January 20, 2024</p>
+            </div>
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab('code')">Code</button>
+                <button class="tab-button" onclick="openTab('multimedia')">Multimedia</button>
+                <button class="tab-button" onclick="openTab('booklet')">Booklet</button>
+                <button class="tab-button" onclick="openTab('ratings')">Ratings</button>
+            </div>
+            <div id="ratings" class="tab-content">
+                <h3>Ratings</h3>
+                <form id="ratingsForm">
+                    <!-- Dynamic questions will be inserted here by JavaScript -->
+                </form>
+                <input type="submit" value="Submit">
+                <div class="average-rating">
+                    <span>Average Rating:</span>
+                    <div class="stars">
+                        <!-- Stars for average rating -->
+                    </div>
+                </div>
+            </div>
+           
+            <div id="code" class="tab-content active-tab">
+                <div class="pdf-container">
+                    <iframe src="https://www.bellevuecollege.edu/wp-content/uploads/sites/135/2019/04/SDD_RoadTrip.pdf"></iframe>
+                </div>
+                  <button id="downloadPdfBtn">Download Code</button>
+            </div>
+            <div id="multimedia" class="tab-content">
+                <div id="multimedia">
+                    <div class="media-item">
+                      <img src="C:\Users\PMLS\Desktop\Final year project\FYP\myapp\static\images\download.jpeg" alt="Description of the first image.">
+                      <p>Description of the first image.</p>
+                    </div>
+                    <div class="media-item">
+                      <img src="C:\Users\PMLS\Desktop\Final year project\FYP\myapp\static\images\download.jpeg" alt="Description of the second image.">
+                      <p>Description of the second image.</p>
+                    </div>
+                  </div> 
+
+                  <div id="multimedia">
+                    <div class="media-item">
+                      <img src="C:\Users\PMLS\Desktop\Final year project\FYP\myapp\static\images\download.jpeg" alt="Description of the first image.">
+                      <p>Description of the first image.</p>
+                    </div>
+                    <div class="media-item">
+                      <img src="C:\Users\PMLS\Desktop\Final year project\FYP\myapp\static\images\download.jpeg" alt="Description of the second image.">
+                      <p>Description of the second image.</p>
+                    </div>
+                  </div> 
+
+                  <div id="multimedia">
+                    <div class="media-item">
+                      <img src="C:\Users\PMLS\Desktop\Final year project\FYP\myapp\static\images\download.jpeg" alt="Description of the first image.">
+                      <p>Description of the first image.</p>
+                    </div>
+                    <div class="media-item">
+                      <img src="C:\Users\PMLS\Desktop\Final year project\FYP\myapp\static\images\download.jpeg" alt="Description of the second image.">
+                      <p>Description of the second image.</p>
+                    </div>
+                  </div> 
+               
+                
+            </div>
+            <div id="booklet" class="tab-content">
+                <div class="pdf-container">
+                    <iframe src="https://www.bellevuecollege.edu/wp-content/uploads/sites/135/2019/04/SDD_RoadTrip.pdf"></iframe>
+                </div>
+                           
+                <button id="downloadPdfBtn">Download Booklet</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+{% endblock body %}
+
+{% block jsfile %}<script src="/static/JS/projectview.js"></script> {% endblock jsfile %} 
+    
+        
+        
+
+  

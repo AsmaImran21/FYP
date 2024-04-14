@@ -1,0 +1,53 @@
+.section-two {
+    background-color: lavender;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack sections vertically */
+    padding: 20px 0; /* Add padding to top and bottom for spacing */
+}
+
+.section-two .row {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Wrap items to next line if space is not enough */
+    gap: 10px; /* This controls the space between the items */
+}      
+
+.section-two .row .col {
+    flex: 1; /* Allow columns to grow and fill the space */
+    max-width: 180px; /* Maximum width of the columns, adjust as needed */
+    padding: 15px; /* Padding inside columns, reduced from 35px */
+    border-radius: 10px;
+    display: flex; /* Make the column a flex container */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: #fff; /* Text color for light backgrounds */
+    margin: 10px; /* Margin around columns */
+}
+
+.section-two .row .col img {
+    margin-top:2px;
+    width: 500px; /* Set image width relative to the column size */
+    height: 500px;
+    /* Remove background and padding if you want the images without the colored background  */ 
+    background: linear-gradient(to top, #6a1b9a, #88e0ef);
+     padding: 5px; 
+    border-radius: 10px;  /* Keep if you want rounded corners on your images */
+}
+
+@media (max-width: 768px) {
+    .section-two .row {
+        justify-content: space-around; /* Distribute space evenly around items on smaller screens */
+    }
+
+    .section-two .row .col {
+        width: auto; /* Auto width for smaller screens */
+        margin-bottom: 15px; /* Space between columns when wrapped */
+    }
+
+    .section-two .row .col img {
+        max-width: 80%; /* Slightly reduce image size on smaller screens */
+    }
+}

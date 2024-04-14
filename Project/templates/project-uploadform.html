@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/project-uploadform1.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/upload-formcontinue.css' %}">
+    <title>Project Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <form id="form" class="main" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h2> Upload Project</h2>
+                <div class="form-control">
+                    <label for="booklet">Upload Title Image</label>
+                    <input type="file" class="upload-box" id="title-image" name="title-image">
+                    <p id="titleimageError"></p> <!-- Error message for booklet -->
+                </div>
+
+                <div class="form-control">
+                    <label for="title">Project Title</label>
+                    <input type="text" id="title" name="title">
+                    <p id="titleError"></p>
+                </div>
+
+                <div class="form-control">
+                    <label for="description">Short Description</label>
+                    <textarea id="description" name="description" rows="4"></textarea>
+                    <p id="desError"></p>
+                </div>
+
+                <div class="form-control">
+                    <label for="projectType">Project Type</label>
+                    <select class="select-box" id="categorySelect" name="project_type">
+                        <option value="">--Project Type--</option>
+                        <option value="web">Web Development</option>
+                        <option value="app">App Development</option>
+                        <option value="hardware">Hardware Development</option>
+                        <option value="rnd">Research and Development</option>
+                    </select>
+                    <p id="selectError"></p>
+                </div>
+
+                <div class="form-control">
+                    <div id="languageList" class="hidden">
+                        <label for="language">Languages</label>
+                        <div id="languages"></div>
+                        <p id="langError"></p>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label for="addSkill">+Add Skill</label>
+                    <a href="#" id="addSkill">Add More</a>
+                
+                    <div id="skillsFields">
+                        <!-- Existing technology field -->
+                        <div class="skill-field">
+                            <input type="text" class="skill" id="skill" name="skill[]" placeholder="Skill">
+                            <input type="text"class="percentage" id="percentage" name="percentage[]"  placeholder="Percentage">
+                            <a href="#" class="remove-skill">-</a>
+                        </div>
+                        <p class="error" id="skillsError"></p> <!-- Error message for technologies -->
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label for="teamMembers">Name of Team Members</label>
+                    <input type="text" id="team_members" name="team_members">
+                    <p id="teamError"></p>
+                </div>
+                <div class="form-control">
+                    <label for="addTechnology">+Add Technology</label>
+                    <a href="#" id="addTechnology">Add More</a>
+                
+                    <div id="technologiesFields">
+                        <!-- Existing technology field -->
+                        <div class="technology-field">
+                            <input type="text" class="technology" id="technology" name="technology[]" placeholder="Technology">
+                            <input type="text" class="version" id="version" name="version[]" placeholder="Version">
+                            <a href="#" class="remove-technology">-</a>
+                        </div>
+                        <p class="error" id="technologiesError"></p> <!-- Error message for technologies -->
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label for="resultcard">Upload Result Card</label>
+                    <input type="file" class="upload-box" id="resultcard" name="resultcard">
+                    <p class="error" id="resultcardError"></p> <!-- Error message for resultcard -->
+                </div>
+                
+                <div class="form-control">
+                    <label for="booklet">Upload Booklet</label>
+                    <input type="file" class="upload-box" id="booklet" name="booklet">
+                    <p class="error" id="bookletError"></p> <!-- Error message for booklet -->
+                </div>
+
+
+                <div class="form-control">
+                    <label for="githuburl">Github URL</label>
+                    <input type="text" class="upload-box" id="githuburl" name="githuburl">
+                    <p class="error" id="codeError"></p> <!-- Error message for GitHub URL -->
+                </div>
+
+                <div class="form-control">
+                    <label for="video">Upload Video (Optional)</label>
+                    <input type="file" class="upload-box" id="video" name="video">
+                    <p class="error" id="videoError"></p> <!-- Error message for video -->
+                </div>
+
+                <div class="form-control">
+                    <label for="multimedia">Upload Images</label>
+                    <div id="multimediaFields">
+                        <!-- Existing multimedia field -->
+                        <div class="multimedia-field">
+                            <input type="file" class="upload-box" name="multimedia" id="multimedia" multiple>
+                            <a href="#" class="remove-multimedia">Remove</a>
+                        </div>
+                    </div>
+                    <a href="#" id="addMultimedia">+Add More</a>
+                    <p class="error" id="multimediaError"></p> <!-- Error message for multimedia -->
+                </div>
+
+
+                <button type="submit" class="submitbtn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'JS/project-upload.js' %}"></script>
+  
+</body>
+</html>

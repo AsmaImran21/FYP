@@ -1,0 +1,44 @@
+{% extends "basepmo.html" %}
+{% load static %}
+{% block title %}Events{% endblock title %}
+{% block eventactive %}active{% endblock eventactive %}
+{% block cssfile %}<link rel="stylesheet" href="{% static 'CSS/eventview.css' %}">{% endblock cssfile %}
+
+
+{% block body %}
+    <!--Heading-->
+    <section class="sec-0" style="background-image: url('{% static 'images/dark-blue-header.jpg' %}'); background-repeat:no-repeat; background-size: cover; background-position: bottom-center;">
+        <div class="event-header">
+            <h1>Events</h1>
+            <p>Explore events and competitions all around</p>
+        </div>
+         <!-- Search Bar -->
+         <div class="search-bar">
+            <input type="text" placeholder="Search in Projects" class="search-input">
+           <a href="/event"><button class="search-btn"><i class="fas fa-search"></i></button></a>
+        </div>
+</section>
+    <!-- Dynamic Events Section -->
+    {% for event in events %}
+    <div class="event">
+        <h2 class="event-title">{{ event.title }}</h2>
+        <div class="event-content">
+            <div class="event-image">
+                <img src="{{ event.image.url }}" alt="{{ event.title }}">
+            </div>
+            <div class="event-details">
+                <p class="venue"><i class="fas fa-map-marker-alt"></i> {{ event.location }}</p>
+                <p class="date"><i class="far fa-calendar-alt"></i> {{ event.date }}</p>
+                <p class="time"><i class="fa-solid fa-clock"></i> {{ event.time }}</p>
+                <p class="description">{{ event.description }}</p>
+                <a href="{{ event.url }}" target="_blank">More Info</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+   
+{% endblock body %}
+
+
+{% block jsfile %}<script src="https://unpkg.com/scrollreveal"></script>
+<script src="{% static 'JS/eventview.js' %}"></script> {% endblock jsfile %}

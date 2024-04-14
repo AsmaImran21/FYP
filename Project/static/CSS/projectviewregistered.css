@@ -1,0 +1,43 @@
+.report-problem-container {
+    text-align: right; /* Center align the link */
+    margin-top: 50px; /* Space from the content above */
+    padding: 20px; /* Padding for aesthetic spacing */
+    margin-right: 5px;
+     }
+
+.report-problem-link {
+    text-decoration: none;
+    color: #3b35dc; /* A standard color for reporting links or buttons */
+    background-color: transparent; /* No background color */
+    cursor: pointer; /* Cursor to indicate a link */
+    font-weight: bold; /* Bold text to make it stand out */
+    padding: 5px 10px; /* Padding for clickable area */
+    border-radius: 4px; /* Rounded corners if needed */
+    display: inline-block; /* To apply padding and centered text properly */
+    transition: color 0.3s ease; /* Transition for the hover effect */
+    display: inline-flex; /* Allows for proper alignment of icon and text */
+    align-items: center; /* Aligns the icon and text vertically */
+    font-size: 18px;
+}
+
+.report-problem-link i {
+    margin-right: 8px; /* Adds space between the icon and text */
+}
+
+.report-problem-link:hover {
+    color: #0e0b9e; /* Darker shade when hovered */
+    text-decoration: none; /* Remove underline on hover for effect */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .report-problem-container {
+        margin-top: 20px; /* Slightly less margin on smaller screens */
+        padding: 15px; /*  padding as needed for smaller screens */
+    }
+
+    .report-problem-link {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 5px 8px; /* Adjust padding to ensure it's tap-friendly on mobile */
+    }
+}

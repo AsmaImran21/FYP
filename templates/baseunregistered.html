@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD SECTION -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TITLE BLOCK -->
+<title>{% block title %}PSEFC{% endblock title %} </title>
+
+<!-- CSS FILES BLOCK -->
+{% block cssfile%} {% endblock cssfile%}
+
+<!-- COMMON CSS FILES -->
+<link rel="stylesheet" href="/static/CSS/basestudent.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<!-- BODY SECTION -->
+
+<!-- NAV BAR -->
+<body>
+
+    <div class="navbar" id="myNavbar">
+      <div class="navbar-header">
+       <a href="/homePageUnreg"> <img src="/static/images/logo (2).png" alt="logo" class="logo"> </a>
+        <button class="hamburger" onclick="toggleNavbar()">&#9776;</button>
+      
+      </div>
+        <div class="navbar-menu">
+          <a href="/homePageUnreg" class="nav-item" {% block homeactive %} {% endblock homeactive %}>Home</a>
+          <a href="/homePageUnreg#projectcategories" class="nav-item" {% block projectactive %} {% endblock projectactive %}>Projects</a>
+          <a href="/event" class="nav-item" {% block eventactive %} {% endblock eventactive %}>Events</a>
+          <a href="/aboutUs" class="nav-item" {% block aboutactive %} {% endblock aboutactive %}>About Us</a>
+        </div>
+        
+      </div>
+
+<!-- SPECIFIC CONTENT FOR EACH PAGE WILL BE DISPLAYED HERE -->
+{% block body %}
+{% endblock body %}
+
+
+<!--  FOOTER FOR EACH PAGE -->
+      <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li class="nav-item"><a href="/homePageUnreg">Home</a></li>
+                    <li class="nav-item"><a href="/homePageUnreg#projectcategories"><i class="fas fa-project"></i>Projects</a></li>
+                    <li class="nav-item"><a href="/event">Events</a></li>
+                    <li class="nav-item"><a href="/aboutUs">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="/homePageUnreg#faq">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: contact@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section copyright">
+                <p>Copyright &copy; 2024 Project Showcase to Empower Future Creators. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- JS FILES BLOCK -->
+{% block jsfile %} {% endblock jsfile %} 
+  <!-- JS FILES Common for all pages -->  
+<script src="/static/JS/basehtml.js"></script>
+</body>
+</html>

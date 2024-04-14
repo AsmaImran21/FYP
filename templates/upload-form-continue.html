@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Form Continue</title>
+    <link rel="stylesheet" href="/static/CSS/upload-form-continue.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="fform">
+                <form id="form" class="main" action="/uploadProjectContinue" onsubmit="return validateForm()">
+                    <h2>Upload Project</h2>
+
+                    <div class="form-control">
+                        <label for="booklet">Upload Booklet </label>
+                        <input type="file" class="upload-box" id="booklet">
+                        <p id="bookletError"></p>
+                    </div>
+                    <div class="form-control">
+                        <label for="code">Upload Code </label>
+                        <input type="file" class="upload-box" id="code">
+                        <p id="codeError"></p>
+                    </div>
+                    <div class="form-control">
+                        <label for="mutimedia">Upload Multimedia Content </label>
+                        <input type="file" class="upload-box" id="multimedia" multiple>
+                        <p id="multimediaError"></p>
+                    </div>
+                    <button type="submit" value="Submit" class="">Submit</button>
+                    <div class="image" style="background-image: url('{% static 'images/upload-project.jpg' %}'); background-repeat:no-repeat; background-size: cover; background-position: bottom-center;">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/JS/upload-form-continue.js"></script>
+</html>

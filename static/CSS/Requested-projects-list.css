@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    background: #ADA1E6;
+}
+
+
+
+
+/*project list*/
+.heading {
+    color: #444;
+    font-size: 40px ;
+    margin-left: -927px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #4f4e4e;
+    height:70px;
+}
+
+td {
+    width: 200px;
+    text-align: center;
+}
+
+td img {
+    margin-left: -102px;
+    width: 40px;
+    height: 40px;
+}
+
+.name {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.row {
+    background-color: #EBF5FB;
+    border-radius: 8px;
+    border: none;
+}
+.fa-check,
+.fa-minus {
+    color: purple;
+}
+.fa-check:hover, .fa-minus:hover{
+    background-color: transparent;
+}
+.row:hover {
+    background-color: rgb(173, 53, 197);
+    color: #eee;
+    cursor: pointer;
+}
+
+.row .name {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 65px;
+    position: absolute;
+
+    transform: translateY(-50%);
+    left: 50px;
+    /* Adjust as needed */
+}
+
+.row:hover .fa-check,
+.row:hover .fa-minus {
+    color: #eee;
+}
+
+.table th,
+.table td {
+    border: none;
+}
+
+.table tbody td:first-child {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.table tbody td:last-child {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.spacing-row {
+    height: 10px;
+}
+
+.container {
+    width: 1200px;
+    padding: 32px;
+    margin-left:67px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 10px;
+       backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width:575px) {
+    .container {
+        width: 125%;
+        padding: 20px 10px;
+    }
+}

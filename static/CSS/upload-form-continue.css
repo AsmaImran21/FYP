@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #6a1b9a, #88e0ef);
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 480px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+.inner-container{
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    margin-top: 35px;
+    margin-left: 54px;
+}
+.fform{
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    top: 0;
+    left: 0;
+}
+.form-control p{
+    color: red;
+    font-size:15px;
+    margin-top: 3px;
+
+}
+.image{
+    position: absolute;
+    height: 111%;
+    width: 496px;
+    left: 114%;
+    top: -35px;
+    object-fit: cover; 
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+form{
+    margin-left: 38px;
+}
+form label {
+    display: flex;
+    flex-direction: column;
+    width: 108%;
+    margin: -9px -46px 10px 0;
+}
+
+.form-control{
+    font-size: 16px;
+    width: 98%;
+    padding-top: -18px;
+    margin-bottom: 20px;
+}
+
+.upload-box{
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+    width: 350px;
+    outline: none;
+}
+
+
+::-webkit-file-upload-button{
+    color: white;
+    background: #8a00c2;
+    padding: 6px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px 1px rgb(36, 36, 36);
+    outline: none;
+}
+::-webkit-file-upload-button:hover{
+    background:  #b100cd;
+} 
+button {
+    width: 25%; 
+    padding: 10px;
+    margin-top: -9px;
+    margin-left: 133px; 
+    margin-right: auto; 
+    background: #8a00c2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #b100cd;
+}

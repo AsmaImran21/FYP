@@ -1,0 +1,52 @@
+{% extends "basepmo.html" %}
+{% load static %}
+{% block title %}About us{% endblock title %}
+{% block aboutactive %}active{% endblock aboutactive %}
+{% block cssfile%}<link rel="stylesheet" href="/static/CSS/Aboutus.css">{% endblock cssfile%}
+
+
+
+{% block body %}
+    <header>
+        <h1>A platform to share ideas and innovation</h1>
+        <p>Founded in 2024,  our online platform is designed to bridge the gap between aspiring students and the wealth of knowledge from senior peers' projects.</p>
+    </header>
+
+    <section class="about-section">
+        <div>       
+        
+            <h2>Who We Are?</h2>
+            <p>We are a dedicated group from the Department of Computer Science at GC Women University Sialkot. Our team consists of Meerab Mir, Asma Imran, and Eman Shahbaz, each of us carrying the passion for technology and innovation. Guided by our esteemed supervisor, Dr. Muhammad Hamid, we are committed to empowering future creators through our initiative, "Project Showcase to Empower Future Creators." Our platform is designed to bridge the gap between students and their aspirations by providing a comprehensive web platform that connects them with the experiences and projects of their senior peers.</p>
+        </div>
+        <img src="/static/images/aboutus1.jpg" alt="Inspiring Image">
+    </section>
+
+    <section class="about-section">
+        <img src="/static/images/aboutus1.jpg" alt="Working Image">
+     <div class="about-subsection">
+        <div>
+          <h2>Our Motivation</h2>
+         <p>Our motivation stems from the challenges we observed among final year students in selecting and showcasing their projects. We noticed that a significant number of students struggle with finding inspiration and understanding the expectations for their Final Year Projects (FYPs). With around 70% of students facing issues in project selection, we saw an opportunity to make a difference. Our platform aims to facilitate idea generation, foster innovation, and enhance career prospects by showcasing student projects to a wider audience, including potential employers.</p>
+        </div>
+    </div>
+    </section>
+    <section class="about-section">
+        <div>
+            <h2 class="rep">Report a Problem!</h2>
+            <p class="report">We strive to provide the best possible experience for our users. 
+            However, we understand that issues may arise from time to time. If 
+            you have encountered any problems or difficulties while using our 
+            services, we encourage you to report them to us. Your feedback is 
+            invaluable in helping us identify and address any issues promptly. 
+            Please use the form below to provide details about the problem you 
+            encountered. Our support team will investigate the issue and work 
+            to resolve it as quickly as possible.</p>
+           <a href="/reportProblem">
+            <button class="rep-btn">Report Your Issue</button>
+            </a>
+        </div>
+        <img src="/static/images/problem.jpg" alt="problem image">
+    
+        </section>
+
+{% endblock body %}

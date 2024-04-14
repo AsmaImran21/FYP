@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #6a1b9a, #88e0ef);
+}
+
+.main {
+    width: 350px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    color: black; 
+    backdrop-filter: blur(5px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* Initially set to invisible */
+    animation: fadeIn 1s ease-in-out forwards; /* Apply animation */
+}
+.main:hover {
+    opacity: 1; /* Make it visible */
+    transform: translateY(0); /* Move it back to its normal position */
+}
+h2{
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+}
+
+    button {
+        display: inline-block;
+        width: 150px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: -11px;
+        margin-right: auto;
+        background: #573b8a;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+
+button:hover {
+    background: #6d44b8;
+}
+/* Animation keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Make it visible */
+    }}

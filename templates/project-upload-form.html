@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/CSS/project-upload-form.css">
+    <title>Project Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+           
+                <form id="form" class="main" onsubmit="return validateForm()">
+                    <h2> Upload Project</h2>
+                    <div class="form-control">
+                        <label for="title">Project Title</label>
+                        <input type="text" id="title" name="title">
+                        <p id="titleError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="description">Short Description</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+                        <p id="desError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="language">Languages</label>
+                        <input type="text" id="language" name="language">
+                        <p id="langError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="skills">Required Skills</label>
+                        <div id="skillsContainer">
+                            <div class="skillsRow">
+                                <input type="text" class="skillInput" placeholder="Skill">
+                                <input type="number" class="percentInput" placeholder="Percentage">
+                                <button type="button" id="addSkillButton" class="addSkillButton">+</button>
+                            </div>
+                        </div>
+                        <p id="skillError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="teamMembers">Name of Team Members</label>
+                        <input type="text" id="teamMembers" name="teamMembers">
+                        <p id="teamError"></p>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="projectType">Project Type</label>
+                        <select class="select-box" id="projectType" name="projectType">
+                            <option value="">--Project Type--</option>
+                            <option value="web">Web Development</option>
+                            <option value="app">App Development</option>
+                            <option value="hardware">Hardware Development</option>
+                            <option value="rnd">Research and Development</option>
+                        </select>
+                        <p id="selectError"></p>
+                    </div>
+                    <a href="upload-form-continue.html">
+                        <button type="submit" value="Submit" class="submitbtn">Submit</button>
+                    </a>
+                </form>
+
+               
+            
+               
+        </div>
+        
+    </div>
+    <script src="/static/JS/project-upload-form.js"></script>
+</body>
+
+
+</html>

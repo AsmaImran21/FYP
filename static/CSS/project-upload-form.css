@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #6a1b9a, #88e0ef);
+    max-width: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: row; /* Children laid out in a row */
+    align-items: stretch; /* This will make the children stretch to fill the container height */
+    justify-content: flex-start; /* Aligns children at the start of the container */
+    width: 100%;
+    max-width: 1200px; /* Adjusted max-width to give more space */
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+    padding: 35px;
+    overflow: hidden; /* Prevents overflow of the children outside the container */
+}
+
+.fform {
+    width: 50%;
+    flex: 1; /* Allows the form to grow as needed, adjust this value as needed */
+    margin-right: 20px; /* Adds some space between the form and the image */
+}
+
+.image {
+    flex: 1; /* Allows the image to grow as needed, adjust this value as needed */
+    width: 50%; /* Adjusts the width of the image container to fit the content */
+    
+}
+
+.inner-container {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.fform {
+    margin-top: 100px;
+    width: 45%;
+    margin-bottom: 50px;
+}
+
+.form-control p {
+    color: red;
+    margin-top: 0;
+}
+.image {
+    position: absolute;
+    height: 935px;
+    width: 662px;
+    left: 49%;
+    top: 173px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.form-control input:focus,
+.form-control textarea:focus {
+    outline: none;
+    border-color: #777;
+}
+
+.main h2 {
+    margin-left: 113px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin: -8px -30px 1px 0;
+}
+
+.form-control {
+    margin: 20px 0;
+}
+
+form input,
+form textarea,
+form select {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+    margin-bottom: 3px;
+}
+
+textarea {
+    resize: none; /* Disable resizing for textarea */
+}
+
+select {
+    height: 46px;
+    appearance: none;
+    padding: 0 15px;
+}
+
+button {
+    background-color: #8a00c2;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 146px;
+}
+
+button:hover {
+    background-color: #b100cd;
+}
+
+a {
+    text-decoration: none;
+    margin-top: -30px;
+    margin-left: 115px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.skillsRow {
+    display: flex; /* Adjusted from inline-block for better alignment */
+    margin-bottom: 10px; /* Add space between skill rows */
+}
+
+.skillsRow .skillInput, .skillsRow .percentInput {
+    margin-right: 9px;
+}
+
+.skillsRow .addSkillButton, .skillsRow .deleteButton {
+    background-color: #8a00c2;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 7px;
+}
+
+.skillsRow .addSkillButton:hover, .skillsRow .deleteButton:hover {
+    background-color: #b100cd;
+}
+
+.submitbtn {
+    width: 60%;
+    margin: 30px auto 50px;
+    background: #573b8a;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .2s ease-in;
+}

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Event Form</title>
+    <link rel="stylesheet" href="{% static 'CSS/report-problem-form.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="fform">
+                <form id="form" method="post" class="main" onsubmit="return validateForm()">
+                  {% csrf_token %}
+                    <h2>Report Problem</h2> 
+                        <div class="form-control">
+                            <label for="category">Problem Category</label>
+                            <select class="select-box" id="category" name="category">
+                                <option value="">--Problem Category--</option>
+                                <option value="c1">Performance Problem</option>
+                                <option value="c2">Navigation Issues</option>
+                                <option value="c3">Form and Input Issues</option>
+                                <option value="c4">Security Concerns</option>
+                                <option value="c5">Content-related Issues</option>
+                                <option value="c6">Functionality Issues</option>
+                                <option value="c7">Login and Authentication Issues</option>
+                            </select>
+                            <p id="cError"></p>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="priority">Priority</label>
+                            <select class="select-box" id="priority" name="priority">
+                                <option value="">--Priority--</option>
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="low">Low</option>
+                            </select>
+                            <p id="pError"></p>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" rows="4"></textarea>
+                            <p id="desError"></p>
+                        </div>
+
+                        <button>Submit</button>
+                        <div class="image" style="background-image: url('{% static 'images/upload-project.jpg' %}'); background-repeat:no-repeat; background-size: cover; background-position: bottom-center;">
+
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="{% static 'JS/report-problem-form.js' %}"></script>
+</html>

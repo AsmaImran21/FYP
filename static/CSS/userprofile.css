@@ -1,0 +1,292 @@
+/* Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Document */
+body {
+  font-family: 'Jost', sans-serif;
+  background: #f8f8f8; /* Lighter shade for the background */
+  color: #333; /* Keeping text in black for readability */
+  line-height: 1.6;
+}
+
+/* Project Container */
+.project-container {
+  display: flex;
+  margin: 10px auto;
+  max-width: 1200px;
+  background: #fff; /* White background for the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+}
+
+/* Left Pane */
+.left-pane {
+  width: 30%;
+  background-color: #f0e8ff; /* A light purple shade for the left pane background */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* Project Image */
+.project-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 5px solid #090000; /* White border for the image */
+}
+
+/* Project Stats (views and likes) */
+.project-stats {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.views, .likes {
+  display: block;
+  font-size: 14px;
+  color: #6a1b9a; /* Purple color for the stats */
+  margin: 5px 0;
+}
+
+/* Skills Section */
+.skills {
+  width: 100%; /* Use full width of the left pane */
+  padding: 20px; /* Padding around the skills section */
+  margin-top: 20px;
+  text-align: left; /* Align text to the left */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align items to the start */
+  width: 100%; /* Ensure full width to accommodate the skill bar */
+  margin-bottom: 15px; /* Space between skill items */
+}
+
+.skill-name {
+  display: flex;
+  align-items: center; /* Align icon and skill name */
+  width: 100%; /* Take full width to align with the skill bar below */
+}
+
+.skill-item i {
+  margin-right: 10px; /* Space between icon and skill name */
+}
+
+.skill-bar {
+  width: calc(100% - 20px); /* Subtract padding from the total width */
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 5px; /* Space above the skill bar */
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 10px;
+  background-color: #703198; /* Adjust color as needed */
+  width: 0; /* Initial width, dynamically adjust based on skill level */
+  border-radius: 5px; /* Rounded corners for the skill level */
+}
+/* Languages Section */
+.languages {
+  width:100%;
+  padding-left: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+#join-date {
+ margin-top: 50px;
+  color:#333;
+  font-size: 12px;
+}
+
+/* Right Pane */
+.right-pane {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* White background for the right pane */
+}
+
+/* Project Information */
+.project-info {
+ 
+  padding-bottom: 30px;
+
+}
+
+.project-info h1 {
+  font-size: 28px;
+  color: #6a1b9a; /* Purple color for the title */
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #333; 
+  margin-bottom: 10px; /* Reduced spacing */
+  text-align: justify;
+  font-size: 16px; /* Adjusted font size for readability */
+  border: none; /* Removes borders */
+  box-shadow: none; /* Removes shadow */
+}
+
+/* Additional Info
+.additional-info p {
+  font-size: 2px;
+  color: #333; 
+  margin: 5px 0;
+  border: none; 
+  box-shadow: none; 
+}*/
+
+/*UPLOAD*/
+section {
+  border-radius: 8px; /* Rounded corners for the section */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for depth */
+  margin: 20px; /* Space around the section */
+  width: 40%; /* Adjust width to make the section compact */
+  max-width: 500px; /* Maximum width to keep it small */
+}
+
+.sec-1 {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.p1 {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.image img {
+  width: 85%;
+  height: 80%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.skills, .collaborators, .cgpa {
+  color: #007bff;
+  margin-top: 15px;
+}
+
+.projectfooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.views, .ratings {
+  color: #333;
+}
+
+.ratings span {
+  color: #ffc107;
+}
+
+.add-project-link {
+  display: block; /* Full-width block for better tap targets on mobile */
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #ececec; /* Light grey background */
+  color: #333; /* Dark text color for contrast */
+  text-decoration: none; /* Removes underline from links */
+  font-weight: bold; /* Makes the text bold */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  text-align: center; /* Ensures text is centered */
+}
+
+.add-project-link i {
+  margin-right: 8px; /* Space between the icon and text */
+}
+
+.add-project-link:hover {
+  background-color: #dcdcdc; /* Slightly darker background on hover */
+  text-decoration: none; /* Ensures the underline does not reappear on hover */
+}
+
+a{
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .add-project-link {
+    font-size: 12px; /* Even smaller font size for very small screens */
+    padding: 6px 10px; /* Reduced padding for very small screens */
+  }
+}
+
+
+/* For resposive design */
+
+@media (max-width: 768px)  {
+  .project-container {
+    flex-direction: column;
+  }
+
+
+  .add-project-link {
+    font-size: 14px; /* Slightly smaller font size on mobile */
+    padding: 8px 12px; /* Slightly smaller padding on mobile */
+  }
+
+  
+   .left-pane, .right-pane {
+    width: 100%;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    margin-bottom: 10px; /* Add spacing between tabs on smaller screens */
+  }
+
+
+  .skill-bar {
+    width: auto;
+  }
+
+  .language-list {
+    justify-content: center;
+  }
+}

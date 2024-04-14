@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PMO/Admin Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/signuppmo.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="fform">
+                <form id="form" method="post" enctype="multipart/form-data" class="main" onsubmit="return validateForm()">
+                    {% csrf_token %}
+                    <div class="user-icon">
+                        <label for="profile-input">
+                            <img id="profile-pic" src="{% static 'images/profile-pic.png' %}" alt="Profile Picture">
+                        </label>
+                        <input type="file" id="profile-input" name="profile-input" accept="image/jpeg, image/jpg, image/png"
+                            style="display: none;">
+                    </div>
+                    <h2>Sign Up</h2>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="firstName">First Name</label>
+                            <input type="text" name="firstname" id="firstName">
+                            <p id="fError"></p>
+                        </div>
+                        <div class="input-field">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastname" id="lastName">
+                            <p id="lError"></p>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                            <p id="emailError"></p>
+                        </div>
+                        <div class="input-field">
+                            <label for="qualification">Qualification</label>
+                            <input type="text" name="qualification" id="qualification">
+                            <p id="qError"></p>
+                        </div>
+                    </div>
+            
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="CNIC">CNIC</label>
+                            <input type="text" name="cnic" id="cnic">
+                            <p id="cnicError"></p>
+                        </div>
+                        <div class="input-field">
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country">
+                            <p id="countryError"></p>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                            <p id="passError"></p>
+                        </div>
+                        <div class="input-field">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" name="confirmpassword" id="confirmPassword">
+                            <p id="cpassError"></p>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="text" name="contactnumber" id="contactnumber">
+                            <p id="contactError"></p>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="description">About yourself</label>
+                            <textarea type="description" name="description" id="description"></textarea>
+                            <p id="desError"></p>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="radio-group">
+                            <label class="gender-label">Gender</label>
+                            <div class="radio-field">
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-field">
+                                <input type="radio" id="female" name="gender" value="female" required>
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-field">
+                                <input type="radio" id="other" name="gender" value="other" required>
+                                <label for="other">Other</label>
+                            </div>
+                            <p id="radioError"></p>
+                        </div>
+                    </div>
+                   
+                   
+                    <button type="submit">Sign Up</button>
+                    <div class="image" style="background-image: url('{% static 'images/upload-project.jpg' %}'); background-repeat:no-repeat; background-size: cover; background-position: bottom-center;">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="{% static 'JS/signupmo.js' %}"></script>
+</html>

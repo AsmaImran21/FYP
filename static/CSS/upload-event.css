@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background-color: lavender;
+   
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 814px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+    
+ 
+}
+.inner-container{
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    margin-top: 35px;
+    margin-left: 54px;
+}
+.fform{
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    top: 0;
+    left: 0;
+   
+}
+.form-control p{
+    color: red;
+    margin-top: 0px;
+
+}
+.image{
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    left: 45%;
+    top: 0;
+    background: url('bg1.jpg') no-repeat center center / cover;
+    border-radius: 20px;
+}
+.form-control input:focus,
+.form-control textarea:focus{
+    outline: none;
+    border-color: #777;
+}
+
+.main h2 {
+    margin-left: 113px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin: -8px -30px 1px 0;
+}
+.form-control{
+    margin: 20px 0px 0px 0px;
+}
+
+form input,
+form textarea{
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.upload-box {
+    background: white;
+    color: #000;
+    font-size: 16px;
+    padding: 1px;
+    border-radius: 50px;
+    margin-left: 1px;
+    width: 390px;
+    outline: none;
+}
+
+.upload-box::-webkit-file-upload-button {
+    background: #6d44b8;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px 1px rgb(36, 36, 36);
+}
+
+::-webkit-file-upload-button:hover {
+    background: #8767c3;
+}
+
+button {
+    width: 25%;
+    padding: 10px;
+    margin-top: -9px;
+    margin-left: 137px;
+    margin-right: auto;
+    background: #6a3cbf;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #6d44b8;
+}     

@@ -1,0 +1,91 @@
+{% load static %}
+{% load json_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PSEFC{% endblock title %}</title>
+    {% block cssfile%} {% endblock cssfile%}
+    <link rel="stylesheet" href="{% static 'CSS/basePMO1.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <div class="navbar-header">
+            <a href="/homePmo"> <img src="/static/images/logo (2).png" alt="logo" class="logo"> </a>
+            <div class="header-right">
+                <div class="notification-container">
+                    <i class="fa fa-bell"></i>
+                        <span class="notification-count">1</span>
+                        <div class="notification-dropdown">
+                            {% if messages %}
+                            <div class="notification-messages"  style="color: black; font-size: 14;">
+                             {% for message in messages %}
+                             <div class="alert {{ message.tags }}">
+                             {{ message }}
+                             </div>
+                             {% endfor %}
+                             </div>
+                         {% endif %}
+                        </div>
+                    </div> 
+                <button class="hamburger">&#9776;</button>
+            </div>
+        </div>
+        <div class="navbar-menu">
+            <a href="/homePmo" class="nav-item">Home</a>
+            <div class="nav-item-dropdown">
+                <div class="dropbtn">Projects <i class="fa fa-caret-down"></i></div>
+                <div class="dropdown-content">
+                    <a href="/homePmo#projectcategories">All Projects</a>
+                    <a href="/requestedProjectsList">Requested Projects</a>
+                </div>
+            </div>
+            <a href="/eventPmo" class="nav-item">Events</a>
+            <a href="/aboutUsPmo" class="nav-item">About Us</a>
+        </div>
+        <div class="navbar-profile">
+            <img src="/static/images/profilepic.jpg" alt="Profile" class="profile-pic">
+            <div class="dropdown-menu">
+                <a href="/userHisprofilepmo"><i class="fa fa-user"></i> View Profile</a>
+                <a href="/changePassword1"><i class="fa fa-key"></i> Change Password</a>
+                <a href="{% url 'pmologout' %}"><i class="fa fa-sign-out-alt"></i>Logout</a>
+            </div>
+        </div>
+    </div>
+    {% block body %} {% endblock body %}
+
+    <!--  FOOTER FOR EACH PAGE -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li class="nav-item"><a href="/homePmo">Home</a></li>
+                    <li class="nav-item"><a href="/homePmo#projectcategories">Projects</a></li>
+                    <li class="nav-item"><a href="/eventPmo">Events</a></li>
+                    <li class="nav-item"><a href="/aboutUsPmo">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="/homePmo#faq">FAQs</a></li>
+                    <li><a href="/reportProblem">Report a problem</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: contact@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section copyright">
+                <p>Copyright &copy; 2024 Project Showcase to Empower Future Creators. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    {% block jsfile %} {% endblock jsfile %} 
+    <script src="{% static 'JS/basepmo.js' %}"></script>
